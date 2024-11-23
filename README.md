@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+### React Task Manager App
+A simple React application to manage daily tasks, featuring task addition, editing, deletion, filtering, and sorting functionalities. The app uses localStorage for data persistence and offers responsive design using plain CSS.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 🚀 Features
 
-## Available Scripts
+Add Task:
 
-In the project directory, you can run:
+Users can add a task with:
 
-### `npm start`
+Title
+Description
+Due Date
+Status (Pending, In Progress, Completed)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+View Tasks:
+Tasks are displayed in a responsive card layout, with:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Task details (title, description, due date, status)
+Inline edit and delete options
 
-### `npm test`
+Edit Task:
+Allows users to edit task details inline.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Delete Task:
+Provides a delete button with confirmation for task removal.
 
-### `npm run build`
+Filter and Sort:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Filter: Filter tasks by status (All, Pending, In Progress, Completed)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Sort: Sort tasks by due date (ascending/descending)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+State Management:
+Utilizes useState and useContext for managing state locally.
 
-### `npm run eject`
+Data Persistence:
+Stores task data in the browser's localStorage.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Responsive Design:
+Ensures a seamless experience on both desktop and mobile devices using plain CSS.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🛠️ Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+React.js: Framework for building the user interface
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+CSS: Plain CSS for styling and responsiveness
 
-## Learn More
+Local Storage: For persisting task data across sessions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 💻 Setup Instructions
+Clone the Repository:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bash
+Copy code
+git clone https://github.com/yourusername/task-manager.git
+cd task-manager
+Install Dependencies:
 
-### Code Splitting
+bash
+Copy code
+npm install
+Run the Development Server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+bash
+Copy code
+npm start
+Open http://localhost:3000 to view the app in the browser.
+Build for Production:
 
-### Analyzing the Bundle Size
+bash
+Copy code
+npm run build
+Creates an optimized build in the build folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 📂 Project Structure
+bash
 
-### Making a Progressive Web App
+Copy code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+src/
 
-### Advanced Configuration
+│
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+├── components/
 
-### Deployment
+│   ├── TaskForm.js       # Form for adding tasks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+│   ├── TaskItem.js       # Individual task component
 
-### `npm run build` fails to minify
+│   └── TaskList.js       # Displays the list of tasks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+│
+
+├── context/
+
+│   └── TaskContext.js    # Context API for task management
+
+│
+
+├── App.js                # Main application component
+
+├── App.css               # Global CSS styles
+
+└── index.js              # Application entry point
